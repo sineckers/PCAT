@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const dotenv = require('dotenv');
+dotenv.config();
 
-mongoose.connect('mongodb+srv://yasar:JxkkMwIcnHRmS7MW@denemedb.bazro.mongodb.net/PCAT?ssl=true&authSource=admin', {
+mongoose.connect(process.env.MONGOURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
